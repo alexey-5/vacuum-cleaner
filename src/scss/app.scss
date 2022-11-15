@@ -1,0 +1,58 @@
+@import 'normalize';
+
+body {
+   background-color: #d8d0bc;
+ }
+ 
+ .wrapper {// vw - 1% ширины окна бр.
+   width: calc(100vw - 60px);
+   height: 100%;
+   background-color: #ffffffab;
+   margin: 30px auto;
+   border-radius: 10px;
+   max-width: 1420px;
+ }
+ .container {
+   width: 90%;
+   margin: 0 auto;
+   /* &--cart {
+     max-width: 820px;
+     margin: 90px auto;
+     .content__title {
+       margin: 0;
+     }
+   } */
+ }
+ .header {
+   /* border-bottom: 1px solid #ffffffab; */
+   padding: 10px 0;
+ 
+   .container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* @media (max-width: 720px) {
+       flex-direction: column;
+     } */
+   }
+}
+.header__logo {
+    display: flex;
+  align-items: center;
+}
+.button{
+  border: 1px solid #ffffffab;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: green;
+  color: #fff;
+  &:hover{
+    background-color: rgb(40, 205, 40);
+  }
+}
+.home{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

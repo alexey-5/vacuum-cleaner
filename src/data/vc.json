@@ -1,0 +1,107 @@
+[
+   {
+      "imageUrl": "1",
+      "name": "KITFORT КТ-507",
+      "price": 3190,
+      "category": 1,
+      "idImg": 1
+   },
+   {
+      "imageUrl": "2",
+      "name": "Xiaomi Deerma Stick Cleaner DX700",
+      "price": 3490,
+      "category": 1,
+      "idImg": 2
+   },
+   {
+      "imageUrl": "3",
+      "name": "SUPRA VCS-1494",
+      "price": 5390,
+      "category": 1,
+      "idImg": 3
+   },
+   {
+      "imageUrl": "4",
+      "name": "NATIONAL NH-VS1413",
+      "price": 5490,
+      "category": 1,
+      "idImg": 4
+   },
+   {
+      "imageUrl": "5",
+      "name": "HYUNDAI H-VCH07",
+      "price": 5990,
+      "category": 1,
+      "idImg": 5
+   },
+   {
+      "imageUrl": "6",
+      "name": "ECON ECO-1442VC",
+      "price": 2790,
+      "category": 2,
+      "idImg": 6
+   },
+   {
+      "imageUrl": "7",
+      "name": "ECON ECO-1440VC",
+      "price": 2990,
+      "category": 2,
+      "idImg": 7
+   },
+   {
+      "imageUrl": "8",
+      "name": "SUPRA VCS-1651",
+      "price": 3590,
+      "category": 2,
+      "idImg": 8
+   },
+   {
+      "imageUrl": "9",
+      "name": "DOFFLER VCC-1418 VG",
+      "price": 3990,
+      "category": 2,
+      "idImg": 9
+   },
+   {
+      "imageUrl": "10",
+      "name": "SUPRA VCS-1833",
+      "price": 4290,
+      "category": 2,
+      "idImg": 10
+   },
+   {
+      "imageUrl": "11",
+      "name": "автомобильный BOMANN CB 967 weis",
+      "price": 1990,
+      "category": 3,
+      "idImg": 11
+   },
+   {
+      "imageUrl": "12",
+      "name": "SUPRA VCS-1410",
+      "price": 2590,
+      "category": 3,
+      "idImg": 12
+   },
+   {
+      "imageUrl": "13",
+      "name": "ECON ECO-1415VB",
+      "price": 2690,
+      "category": 3,
+      "idImg": 13
+   },
+   {
+      "imageUrl": "14",
+      "name": "HOOVER TCP-1401 019",
+      "price": 2990,
+      "category": 3,
+      "idImg": 14
+   },
+   {
+      "imageUrl": "15",
+      "name": "ECON ECO-1401VB",
+      "price": 3170,
+      "category": 3,
+      "idImg": 15
+   }
+]
