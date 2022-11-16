@@ -1,0 +1,35 @@
+.header {
+   /* border-bottom: 1px solid #ffffffab; */
+   padding: 10px 0;
+ 
+   .container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* @media (max-width: 720px) {
+       flex-direction: column;
+     } */
+   }
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.header_logo {
+  display: flex;
+align-items: center;
+}
+.button{
+  border: 1px solid #ffffffab;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: green;
+  color: #fff;
+  &:hover{
+    background-color: rgb(40, 205, 40);
+  }
+}
+.title{
+  color: #000;
+}

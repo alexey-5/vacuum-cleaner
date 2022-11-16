@@ -1,4 +1,4 @@
-import styles from "./Card.module.css";
+import styles from "./Card.module.scss";
 //import { useDispatch, useSelector } from "react-redux";
 //import { fetchCartDel, fetchCartPlus } from "../../store/cartSlice";
 //import { fetchfavPlus } from "../../store/favorSlice";
