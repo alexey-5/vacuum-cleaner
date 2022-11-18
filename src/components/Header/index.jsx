@@ -1,9 +1,20 @@
+import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
   const arrCart = useSelector((state)=>state.cart.arrCart)
+  const sum = useSelector((state)=>state.cart.sum)
+  const render1 = useRef(false)
+
+  useEffect(()=>{
+    if(render1.current){
+      const json = JSON.stringify(arrCart)
+      localStorage.setItem('cartVacuumCleaner',json) 
+    }
+     render1.current = true; 
+  },[arrCart])
 
   return (
     <header className={styles.header}>

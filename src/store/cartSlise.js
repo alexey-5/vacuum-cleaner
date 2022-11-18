@@ -1,26 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+// == Загрузка корзины из localStorage
 const json1 = localStorage.getItem("cartVacuumCleaner");
 const json = json1 ? JSON.parse(json1) : [];
 // console.log(json);
 const cartSlise = createSlice({
   name: "cart",
   initialState: {
-    arrCart: json,
-    sum: json.reduce((akk, elem) => akk + elem.price * elem.count, 0),
+    arrCart: json, // массив корзины
+    sum: json.reduce((akk, elem) => akk + elem.price * elem.count, 0), // стоимость корзины
   },
 
   reducers: {
-   
     addItem(state, action) {
-      const itemId = state.arrCart.find((elem) => elem.idImg === action.payload.idImg);
+      // добавление товара в корзину
+      const itemId = state.arrCart.find(
+        (elem) => elem.idImg === action.payload.idImg
+      );
       if (itemId) {
+        //если товар уже есть в корзине
         itemId.count = itemId.count + 1;
       } else {
-        state.itemCart.push({ ...action.payload, count: 1 });
+        //при добавлении товара добавляем свойство  count:
+        state.arrCart.push({ ...action.payload, count: 1 });
       }
 
-      state.sum = state.item.reduce(
+      state.sum = state.arrCart.reduce(
+        //подсчёт стоимости
         (akk, elem) => akk + elem.price * elem.count,
         0
       );
