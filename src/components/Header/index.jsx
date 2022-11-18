@@ -1,19 +1,23 @@
-import { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { total } from "../../store/cartSlise";
 import styles from "./Header.module.scss";
 
 function Header() {
-  const arrCart = useSelector((state)=>state.cart.arrCart)
-  const sum = useSelector((state)=>state.cart.sum)
+  const {arrCart, sum } = useSelector((state)=>state.cart)
   const render1 = useRef(false)
+  const [countTotal, setCountTotal] = useState(0)
+  const dispatch = useDispatch();
 
   useEffect(()=>{
     if(render1.current){
       const json = JSON.stringify(arrCart)
       localStorage.setItem('cartVacuumCleaner',json) 
     }
-     render1.current = true; 
+     render1.current = true;
+     setCountTotal(arrCart.reduce((akk, elem) => akk + elem.count, 0));
+     dispatch(total()); // считаем стоимость корзины
   },[arrCart])
 
   return (
@@ -36,7 +40,7 @@ function Header() {
           <div className={styles.button}>
             Корзина
             <br />
-            1000 ₽ | 3 шт.
+            {sum} ₽ | {countTotal} шт.
           </div>
         </Link>
       </div>

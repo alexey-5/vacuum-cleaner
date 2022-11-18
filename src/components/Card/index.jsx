@@ -1,21 +1,16 @@
 import styles from "./Card.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-//import { fetchCartDel, fetchCartPlus } from "../../store/cartSlice";
-//import { fetchfavPlus } from "../../store/favorSlice";
 import { useState } from "react";
 import { useEffect } from "react";
 import { addItem } from "../../store/cartSlise";
 
-function Card({idImg, name, price, category, imageUrl }) {
-  //const onClBtn=()=>alert(title) /* Первый параметр от onClick содержит спецобъект по умолчанию*/
-  // если только он не задан аргументом при вызове
+function Card({ idImg, name, price, category, imageUrl }) {
   const dispatch = useDispatch();
+  const { arrCart } = useSelector((state) => state.cart);
+   // смена иконки при выборе товара
+  const checked = arrCart.find((el) => el.idImg === idImg);
   //const itemsCart = useSelector((state) => state.cart.cart);
   //const itemsFavorit = useSelector((state) => state.favor.favor);
-
-  //const [blocking, setBlocking] = useState(false); //блокировка кнопки
-  //const [blockingF, setBlockingF] = useState(false); //блокировка кнопки
-
   /* useEffect(() => {
     setBlocking(false);
     setBlockingF(false);
@@ -76,23 +71,17 @@ function Card({idImg, name, price, category, imageUrl }) {
             className={styles.plus}
             width={30}
             height={30}
-            src={require(`../../img/plus.svg`).default}
+            src={
+              checked
+                ? require(`../../img/check.svg`).default
+                : require(`../../img/plus.svg`).default
+            }
             alt="plus"
-            onClick={()=>dispatch(addItem({idImg, name, price, category, imageUrl }))}
+            onClick={() =>
+              dispatch(addItem({ idImg, name, price, category, imageUrl }))
+            }
           />
         </div>
-        {/*  <img
-          onClick={Select}
-          className={blocking ? styles.card__disabled : styles.card__btn}
-          width={32}
-          height={32}
-          src={
-            select
-              ? require(`../../img/plus-select.svg`).default
-              : require(`../../img/plus32.svg`).default
-          }
-          alt="plus"
-        /> */}
       </div>
     </div>
   );

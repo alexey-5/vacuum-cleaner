@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { deleteItem, minus, plus } from "../../store/cartSlise";
 import styles from "./Cart.module.scss";
 
 function Cart() {
@@ -6,22 +7,21 @@ function Cart() {
   //const countTotal = pizzaItem.reduce((akk, elem) => elem.count + akk, 0);
   const sum = useSelector((state) => state.cart.sum);
   const dispatch = useDispatch();
-  /* const cartItems = [
-    {
-      imageUrl: "5",
-      name: "HYUNDAI H-VCH07",
-      price: 5990,
-      category: 1,
-      idImg: 5,
-    },
-    {
-      imageUrl: "6",
-      name: "ECON ECO-1442VC",
-      price: 2790,
-      category: 2,
-      idImg: 6,
-    },
-  ]; */
+
+  if (!arrCart.length)
+    return (
+      <div className={styles.cartEmpty}>
+        <img
+          src={require(`../../img/cartEmpty.jpg`)} /* maxWidth={300} maxHeight={300} */
+        />
+        <p>
+          Ваша корзина абсолютно пустая.
+          <br /> Добавьте в неё пылесос!
+        </p>
+      </div>
+      
+    );
+
   return (
     <section className="container">
       {arrCart.map((el, index) => (
@@ -39,8 +39,14 @@ function Cart() {
               <img
                 width={30}
                 height={30}
-                src={require(`../../img/minus_cart.svg`).default}
-                alt="plus"
+                src={
+                  //если товаров больше 1 - покажем активную кнопку
+                  el.count > 1
+                    ? require(`../../img/minus_cart.svg`).default
+                    : require(`../../img/minus_off.svg`).default
+                }
+                alt="minus"
+                onClick={() => dispatch(minus(el.idImg))}
               />
               {el.count} шт.
               <img
@@ -48,16 +54,19 @@ function Cart() {
                 height={30}
                 src={require(`../../img/plus_cart.svg`).default}
                 alt="plus"
+                onClick={() => dispatch(plus(el.idImg))}
               />
             </div>
           </div>
-          <div>5000 руб.</div>
-          <img  className={styles.del}
-                width={30}
-                height={30}
-                src={require(`../../img/del.svg`).default}
-                alt="plus"
-              />
+          <div>{el.price * el.count} руб.</div>
+          <img
+            className={styles.del}
+            width={30}
+            height={30}
+            src={require(`../../img/del.svg`).default}
+            alt="delete"
+            onClick={() => dispatch(deleteItem(el.idImg))}
+          />
         </div>
       ))}
     </section>
