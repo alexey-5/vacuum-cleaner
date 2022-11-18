@@ -1,3 +1,27 @@
 .img{
    object-fit:contain;
+   border-radius: 10px;
   }
+.card_cart{
+   display: flex;
+   justify-content: space-between;
+   margin: 5px 0;
+   align-items: center;
+}  
+.info{
+   margin: 20px;
+   img{
+      cursor: pointer;
+   }
+}  
+.del{
+   margin: 20px;
+   cursor: pointer;
+}  
+.calc{
+   padding: 20px;
+   background-color: greenyellow;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+}  

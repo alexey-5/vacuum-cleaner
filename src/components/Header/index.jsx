@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
+  const arrCart = useSelector((state)=>state.cart.arrCart)
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>

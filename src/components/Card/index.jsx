@@ -1,14 +1,15 @@
 import styles from "./Card.module.scss";
-//import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 //import { fetchCartDel, fetchCartPlus } from "../../store/cartSlice";
 //import { fetchfavPlus } from "../../store/favorSlice";
 import { useState } from "react";
 import { useEffect } from "react";
+import { addItem } from "../../store/cartSlise";
 
-function Card({ id, idImg, imageUrl, name, price }) {
+function Card({idImg, name, price, category, imageUrl }) {
   //const onClBtn=()=>alert(title) /* Первый параметр от onClick содержит спецобъект по умолчанию*/
   // если только он не задан аргументом при вызове
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   //const itemsCart = useSelector((state) => state.cart.cart);
   //const itemsFavorit = useSelector((state) => state.favor.favor);
 
@@ -21,7 +22,7 @@ function Card({ id, idImg, imageUrl, name, price }) {
   }, [itemsCart, itemsFavorit]); // Снятие блока после обновления корзины */
 
   //const select = itemsCart.find((item) => item.idt === idt); //если в корзине есть эта карточка - галочка
- // const like = itemsFavorit.find((item) => item.idt === idt); //если в фаворитах есть эта карточка - галочка
+  // const like = itemsFavorit.find((item) => item.idt === idt); //если в фаворитах есть эта карточка - галочка
   //const obj = { id, idt, imgSrc, title, prise };
   //console.log('card- ',itemsCart)
 
@@ -46,20 +47,23 @@ function Card({ id, idImg, imageUrl, name, price }) {
   }; */
   return (
     <div className={styles.card}>
-      <img className={styles.card__like}
+      <img
+        className={styles.card__like}
         //onClick={Like}
         //className={blockingF ? styles.card__disabled : styles.card__like}
         width={30}
         height={30}
-         src={require(`../../img/like.svg`).default
+        src={
+          require(`../../img/like.svg`).default
           /* like
             ? require(`../../img/like32.svg`).default
             : require(`../../img/unlike30.svg`).default */
         }
-        alt="like" 
+        alt="like"
       />
-      <img className={styles.img}
-        width={130 }
+      <img
+        className={styles.img}
+        width={130}
         height={130}
         src={require(`../../img/${idImg}.jpg`)}
         alt={styles.sneak}
@@ -67,10 +71,17 @@ function Card({ id, idImg, imageUrl, name, price }) {
       <p className={styles.card__text}>{name}</p>
       <div className={styles.card__prise}>
         <div>
-          {/* <p>ЦЕНА</p> */}
-          <b>{price} руб.</b>
+          <span>{price} руб.</span>
+          <img
+            className={styles.plus}
+            width={30}
+            height={30}
+            src={require(`../../img/plus.svg`).default}
+            alt="plus"
+            onClick={()=>dispatch(addItem({idImg, name, price, category, imageUrl }))}
+          />
         </div>
-       {/*  <img
+        {/*  <img
           onClick={Select}
           className={blocking ? styles.card__disabled : styles.card__btn}
           width={32}
