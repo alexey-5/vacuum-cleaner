@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Card from "./components/Card";
 import Header from "./components/Header";
+import CardLike2 from "./pages/CardLike2";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import "./scss/app.scss";
@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/like" element={<CardLike2 />} />
       </Routes>
     </div>
   );

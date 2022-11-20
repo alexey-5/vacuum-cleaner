@@ -3,3 +3,24 @@
    justify-content: space-around;
    flex-wrap: wrap;
  }
+.sort{
+   img{
+    cursor: pointer;
+   }
+ }
+ .input{
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 5px 5px 5px 33px;
+  &::placeholder{
+    color: rgb(209, 200, 188);
+  }
+ }
+ .search{
+   position: relative;
+   img {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+   }
+ }

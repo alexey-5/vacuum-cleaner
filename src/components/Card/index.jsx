@@ -9,37 +9,7 @@ function Card({ idImg, name, price, category, imageUrl }) {
   const { arrCart } = useSelector((state) => state.cart);
    // смена иконки при выборе товара
   const checked = arrCart.find((el) => el.idImg === idImg);
-  //const itemsCart = useSelector((state) => state.cart.cart);
-  //const itemsFavorit = useSelector((state) => state.favor.favor);
-  /* useEffect(() => {
-    setBlocking(false);
-    setBlockingF(false);
-  }, [itemsCart, itemsFavorit]); // Снятие блока после обновления корзины */
 
-  //const select = itemsCart.find((item) => item.idt === idt); //если в корзине есть эта карточка - галочка
-  // const like = itemsFavorit.find((item) => item.idt === idt); //если в фаворитах есть эта карточка - галочка
-  //const obj = { id, idt, imgSrc, title, prise };
-  //console.log('card- ',itemsCart)
-
-  /* const Select = () => {
-    //find возвращает найденный по условию аргумент или andef.
-    setBlocking(true);
-    const snik = itemsCart.find((item) => item.idt === idt);
-    if (itemsCart.find((item) => item.idt === idt)) {
-      dispatch(fetchCartDel(snik.id)); // удаление из корзины по аргументу - id
-    } else {
-      // или запись
-      dispatch(fetchCartPlus(obj));
-    }
-  }; */
-
-  /* const Like = () => {
-    setBlockingF(true);
-    /// const snik = itemsFavorit.find((item) => item.idt === idt);
-    if (!itemsFavorit.find((item) => item.idt === idt)) {
-      dispatch(fetchfavPlus(obj));
-    }
-  }; */
   return (
     <div className={styles.card}>
       <img

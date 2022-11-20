@@ -5,20 +5,20 @@ import { total } from "../../store/cartSlise";
 import styles from "./Header.module.scss";
 
 function Header() {
-  const {arrCart, sum } = useSelector((state)=>state.cart)
-  const render1 = useRef(false)
-  const [countTotal, setCountTotal] = useState(0)
+  const { arrCart, sum } = useSelector((state) => state.cart);
+  const render1 = useRef(false);
+  const [countTotal, setCountTotal] = useState(0);
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    if(render1.current){
-      const json = JSON.stringify(arrCart)
-      localStorage.setItem('cartVacuumCleaner',json) 
+  useEffect(() => {
+    if (render1.current) {
+      const json = JSON.stringify(arrCart);
+      localStorage.setItem("cartVacuumCleaner", json);
     }
-     render1.current = true;
-     setCountTotal(arrCart.reduce((akk, elem) => akk + elem.count, 0));
-     dispatch(total()); // считаем стоимость корзины
-  },[arrCart])
+    render1.current = true;
+    setCountTotal(arrCart.reduce((akk, elem) => akk + elem.count, 0));
+    dispatch(total()); // считаем стоимость корзины
+  }, [arrCart]);
 
   return (
     <header className={styles.header}>
@@ -34,6 +34,16 @@ function Header() {
               <h1>Пылесосы</h1>
               Самые лучшие
             </div>
+          </div>
+        </Link>
+        <Link to="/like">
+          <div className={styles.button}>
+            <img
+              width="50"
+              height="50"
+              src={require("../../img/like.svg").default}
+              alt="like"
+            />
           </div>
         </Link>
         <Link to="/cart">
