@@ -41,7 +41,7 @@ function Header() {
             <img
               width="50"
               height="50"
-              src={require("../../img/like.svg").default}
+              src={require("../../img/like-add.svg").default}
               alt="like"
             />
           </div>

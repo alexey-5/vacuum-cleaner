@@ -1,50 +1,36 @@
 import { addItem } from "../../store/cartSlise";
 import styles from "./CardLike2.module.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { deleteItemLike } from "../../store/likeSlise";
 
 function CardLike2() {
-  const arrCart = [
-    {
-      imageUrl: "12",
-      name: "SUPRA VCS-1410",
-      price: 2590,
-      category: 3,
-      idImg: 12,
-    },
-    {
-      imageUrl: "13",
-      name: "ECON ECO-1415VB",
-      price: 2690,
-      category: 3,
-      idImg: 13,
-    },
-  ];
-  //const dispatch = useDispatch();
-  //const { arrCart } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const { arrLike } = useSelector((state) => state.like);
+  const { arrCart } = useSelector((state) => state.cart);
+
+  if (arrLike.length === 0)//если корзина пуста
+    return (
+      <div className={styles.empty}>Вы ничего не добавили в избранное...</div>
+    );
+
   return (
     <div className={styles.like_wrapper}>
-      {arrCart.map((el) => (
+      {arrLike.map((el) => (
         <div key={el.idImg} className={styles.card}>
           <img
             className={styles.card__like}
-            //onClick={Like}
-            //className={blockingF ? styles.card__disabled : styles.card__like}
+            onClick={() => dispatch(deleteItemLike(el.idImg))}
             width={30}
             height={30}
-            src={
-              require(`../../img/like.svg`).default
-              /* like
-            ? require(`../../img/like32.svg`).default
-            : require(`../../img/unlike30.svg`).default */
-            }
-            alt="like"
+            src={require(`../../img/del.svg`).default}
+            alt="delete"
           />
           <img
             className={styles.img}
             width={130}
             height={130}
-            src={require(`../../img/${el.idImg}.jpg`)}
-            alt={styles.sneak}
+            src={require(`../../img/${el.imageUrl}.jpg`)}
+            alt="CleanVacuum"
           />
           <p className={styles.card__text}>{el.name}</p>
           <div className={styles.card__prise}>
@@ -54,15 +40,14 @@ function CardLike2() {
                 className={styles.plus}
                 width={30}
                 height={30}
-                src={
-                  // checked
-                  require(`../../img/check.svg`).default
-                  // : require(`../../img/plus.svg`).default
+                src={ arrCart.find(item=>item.idImg===el.idImg)
+                    ? require(`../../img/check.svg`).default
+                    : require(`../../img/plus.svg`).default
                 }
                 alt="plus"
-                /* onClick={() =>
-              dispatch(addItem({ ...el }))
-            } */
+                onClick={() =>//для добавления отправляем объкт
+                dispatch(addItem(el))
+              }
               />
             </div>
           </div>

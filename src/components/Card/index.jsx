@@ -1,28 +1,28 @@
 import styles from "./Card.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { useEffect } from "react";
+import { addItemLike } from "../../store/likeSlise";
+import { deleteItem } from "../../store/likeSlise";
 import { addItem } from "../../store/cartSlise";
 
 function Card({ idImg, name, price, category, imageUrl }) {
   const dispatch = useDispatch();
   const { arrCart } = useSelector((state) => state.cart);
+  const { arrLike } = useSelector((state) => state.like);
    // смена иконки при выборе товара
   const checked = arrCart.find((el) => el.idImg === idImg);
+  const liked = arrLike.find((el) => el.idImg === idImg);
 
   return (
     <div className={styles.card}>
       <img
-        className={styles.card__like}
-        //onClick={Like}
-        //className={blockingF ? styles.card__disabled : styles.card__like}
+        className={styles.card__like}//добавляем в избранное
+        onClick={()=>dispatch(addItemLike({ idImg, name, price, category, imageUrl }))}
         width={30}
         height={30}
         src={
-          require(`../../img/like.svg`).default
-          /* like
-            ? require(`../../img/like32.svg`).default
-            : require(`../../img/unlike30.svg`).default */
+          liked
+            ? require(`../../img/like-add.svg`).default
+            : require(`../../img/like.svg`).default
         }
         alt="like"
       />
@@ -30,7 +30,7 @@ function Card({ idImg, name, price, category, imageUrl }) {
         className={styles.img}
         width={130}
         height={130}
-        src={require(`../../img/${idImg}.jpg`)}
+        src={require(`../../img/${imageUrl}.jpg`)}
         alt={styles.sneak}
       />
       <p className={styles.card__text}>{name}</p>
@@ -47,7 +47,7 @@ function Card({ idImg, name, price, category, imageUrl }) {
                 : require(`../../img/plus.svg`).default
             }
             alt="plus"
-            onClick={() =>
+            onClick={() =>//для добавления отправляем объкт
               dispatch(addItem({ idImg, name, price, category, imageUrl }))
             }
           />
