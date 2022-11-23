@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import Back from "../../components/Back";
 import { deleteItem, minus, plus } from "../../store/cartSlise";
 import styles from "./Cart.module.scss";
 
@@ -10,6 +11,7 @@ function Cart() {
 
   if (!arrCart.length)
     return (
+      <section className="container">
       <div className={styles.cartEmpty}>
         <img
           src={require(`../../img/cartEmpty.jpg`)} /* maxWidth={300} maxHeight={300} */
@@ -19,7 +21,8 @@ function Cart() {
           <br /> Добавьте в неё пылесос!
         </p>
       </div>
-      
+      <Back/>
+      </section>
     );
 
   return (
@@ -69,6 +72,7 @@ function Cart() {
           />
         </div>
       ))}
+      <Back/>
     </section>
   );
 }

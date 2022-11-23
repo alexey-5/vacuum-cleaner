@@ -16,10 +16,11 @@ function Home() {
   const category = useSelector((state) => state.base.categories);
   const [sort, setSort] = useState(true);
 
-  let clone = []; // клонирование массива
-  for (let key in base) {
+  //let clone = []; // клонирование массива
+  let clone = base.concat();
+ /*  for (let key in base) {
     clone[key] = base[key];
-  }
+  } */
   if (sort) {
     //сортировка объектов по цене
     clone.sort((a, b) => a.price - b.price); //возрастание

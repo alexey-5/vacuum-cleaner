@@ -2,6 +2,7 @@ import { addItem } from "../../store/cartSlise";
 import styles from "./CardLike2.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteItemLike } from "../../store/likeSlise";
+import Back from "../../components/Back";
 
 function CardLike2() {
   const dispatch = useDispatch();
@@ -9,11 +10,13 @@ function CardLike2() {
   const { arrCart } = useSelector((state) => state.cart);
 
   if (arrLike.length === 0)//если корзина пуста
-    return (
+    return (<section className="container">
       <div className={styles.empty}>Вы ничего не добавили в избранное...</div>
+      <Back/></section>
     );
 
   return (
+    <section className="container">
     <div className={styles.like_wrapper}>
       {arrLike.map((el) => (
         <div key={el.idImg} className={styles.card}>
@@ -53,7 +56,9 @@ function CardLike2() {
           </div>
         </div>
       ))}
+      
     </div>
+    <Back/></section>
   );
 }
 export default CardLike2;
