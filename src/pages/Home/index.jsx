@@ -17,7 +17,8 @@ function Home() {
   const [sort, setSort] = useState(true);
 
   //let clone = []; // клонирование массива
-  let clone = base.concat();
+  let clone = [...base]
+  //let clone = base.concat();
  /*  for (let key in base) {
     clone[key] = base[key];
   } */

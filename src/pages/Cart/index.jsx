@@ -5,23 +5,22 @@ import styles from "./Cart.module.scss";
 
 function Cart() {
   const arrCart = useSelector((state) => state.cart.arrCart);
-  //const countTotal = pizzaItem.reduce((akk, elem) => elem.count + akk, 0);
   const sum = useSelector((state) => state.cart.sum);
   const dispatch = useDispatch();
 
   if (!arrCart.length)
     return (
       <section className="container">
-      <div className={styles.cartEmpty}>
-        <img
-          src={require(`../../img/cartEmpty.jpg`)} /* maxWidth={300} maxHeight={300} */
-        />
-        <p>
-          Ваша корзина абсолютно пустая.
-          <br /> Добавьте в неё пылесос!
-        </p>
-      </div>
-      <Back/>
+        <div className={styles.cartEmpty}>
+          <img
+            src={require(`../../img/cartEmpty.jpg`)} /* maxWidth={300} maxHeight={300} */
+          />
+          <p>
+            Ваша корзина абсолютно пустая.
+            <br /> Добавьте в неё пылесос!
+          </p>
+        </div>
+        <Back />
       </section>
     );
 
@@ -72,7 +71,10 @@ function Cart() {
           />
         </div>
       ))}
-      <Back/>
+      <div className={styles.futer}>
+        <span className={styles.futer_info}>Итого: {sum}</span>
+      </div>
+      <Back />
     </section>
   );
 }

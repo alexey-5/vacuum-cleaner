@@ -1,0 +1,21 @@
+img{
+   object-fit:contain;
+   border-radius: 10px;
+   object-fit: contain;
+   max-width: 100%;
+  }
+.one{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+  }
+  .info{
+   text-align: center;
+   max-width: 400px;
+   padding: 20px;
+   span{
+      display: block;
+      padding: 20px;
+   }
+  }
