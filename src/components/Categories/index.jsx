@@ -12,7 +12,7 @@ function Categories() {
         <button
           key={index}
           className={
-            selectCategory == index ? styles.button_select : styles.button
+            selectCategory === index ? styles.button_select : styles.button
           }
           onClick={()=>dispatch(setCategory(index))}
         >

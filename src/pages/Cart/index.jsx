@@ -13,7 +13,7 @@ function Cart() {
       <section className="container">
         <div className={styles.cartEmpty}>
           <img
-            src={require(`../../img/cartEmpty.jpg`)} /* maxWidth={300} maxHeight={300} */
+            src={require(`../../img/cartEmpty.jpg`)} alt="cart"
           />
           <p>
             Ваша корзина абсолютно пустая.

@@ -27,7 +27,7 @@ const baseSlise = createSlice({
   extraReducers:{
     [fetchBase.pending]: (state)=>{
        state.loading = 'pending';
-      // state.items=[];   // console.log('  Идёт зарузка')
+       state.items=[];   // console.log('  Идёт зарузка')
     },
     [fetchBase.fulfilled]: (state, action)=>{
        state.loading = 'succeeded';

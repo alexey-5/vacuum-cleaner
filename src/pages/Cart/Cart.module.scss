@@ -6,8 +6,9 @@
   }
 .card_cart{
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
-   margin: 5px 0;
+   margin: 12px 0;
    align-items: center;
 }  
 .cartEmpty{
@@ -28,9 +29,12 @@
    img{
       cursor: pointer;
    }
+   @media (max-width: 450px) {
+      margin: 5px;
+   }
 }  
 .del{
-   margin: 20px;
+   margin: 10px;
    cursor: pointer;
 }  
 .calc{

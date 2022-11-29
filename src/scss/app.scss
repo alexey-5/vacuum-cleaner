@@ -12,11 +12,15 @@ body {
    border-radius: 10px;
    max-width: 1420px;
    min-height: 85vh;
+   @media (max-width: 480px) {
+    width: calc(100vw - 14px);
  }
+}
  .futer{
   padding: 5px 15px;
   color: #8a826a;
   bottom: 10px;
+  
  }
  .container {
    width: 90%;

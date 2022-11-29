@@ -38,6 +38,7 @@ function Home() {
               src={require("../../img/search.svg").default}
               width="27"
               height="27"
+              alt="search"
             />
             <input // поиск только в категории "все"
               className={styles.input}
@@ -52,6 +53,7 @@ function Home() {
               width="27"
               height="27"
               onClick={() => setSort(true)}
+              alt="arr"
             />
             по цене
             <img
@@ -59,6 +61,7 @@ function Home() {
               width="27"
               height="27"
               onClick={() => setSort(false)}
+              alt="arr"
             />
           </div>
         </div>

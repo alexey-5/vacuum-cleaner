@@ -1,7 +1,6 @@
 import styles from "./Card.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemLike } from "../../store/likeSlise";
-import { deleteItem } from "../../store/likeSlise";
 import { addItem } from "../../store/cartSlise";
 import { Link } from "react-router-dom";
 

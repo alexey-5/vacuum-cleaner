@@ -1,14 +1,10 @@
 .header {
-   /* border-bottom: 1px solid #ffffffab; */
    padding: 10px 0;
- 
    .container {
      display: flex;
      align-items: center;
      justify-content: space-between;
-     /* @media (max-width: 720px) {
-       flex-direction: column;
-     } */
+     flex-wrap: wrap;
    }
 }
 .container {
@@ -18,6 +14,7 @@
 .header_logo {
   display: flex;
 align-items: center;
+
 }
 .button{
   border: 1px solid #ffffffab;
@@ -26,10 +23,17 @@ align-items: center;
   text-align: center;
   background-color: green;
   color: #fff;
+  margin-top: 10px;
   &:hover{
     background-color: rgb(40, 205, 40);
   }
 }
 .title{
   color: #000;
+}
+
+@media (max-width: 370px) {
+  .title h1{
+    font-size: 30px;
+  }
 }
