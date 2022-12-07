@@ -20,7 +20,7 @@ function App() {
       </Routes>
       
     </div>
-    <p className="futer" style={{fontSize: 20}}>Это учебный проект react + redux + react-router6. == alexey-dynai48@yandex.ru ==</p>
+    <p className="futer">Это учебный проект. Вся информация на сайте условная</p> 
     </>
   );
 }
