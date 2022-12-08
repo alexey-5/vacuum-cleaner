@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../../components/Card";
 import Categories from "../../components/Categories";
+import Dropdown from "../../components/Dropdown";
 import { fetchBase } from "../../store/baseSlise";
 import styles from "./Home.module.scss";
 
@@ -30,7 +31,9 @@ function Home() {
   }
   return (
     <section className="container">
-      <Categories />
+      <div className={styles.dropdown}>
+      <Categories /><Dropdown/>
+      </div>
       {!category && (
         <div className={styles.home}>
           <div className={styles.search}>

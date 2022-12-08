@@ -36,7 +36,7 @@ function Cart() {
             alt="Vacuum cleaner"
           />
           <div className={styles.info}>
-            <p>{el.name}</p>
+            <h3>{el.name}</h3>
             <div className={styles.calc}>
               <img
                 width={30}

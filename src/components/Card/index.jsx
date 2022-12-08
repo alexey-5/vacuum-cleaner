@@ -37,7 +37,7 @@ function Card({ idImg, name, price, category, imageUrl }) {
           alt={styles.sneak}
         />
       </Link>
-      <p className={styles.card__text}>{name}</p>
+      <h3 className={styles.card__text}>{name}</h3>
       <div className={styles.card__prise}>
         <div>
           <span>{price} руб.</span>

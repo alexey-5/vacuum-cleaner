@@ -35,7 +35,7 @@ function CardLike2() {
             src={require(`../../img/${el.imageUrl}.jpg`)}
             alt="CleanVacuum"
           />
-          <p className={styles.card__text}>{el.name}</p>
+          <h3 className={styles.card__text}>{el.name}</h3>
           <div className={styles.card__prise}>
             <div>
               <span>{el.price} руб.</span>

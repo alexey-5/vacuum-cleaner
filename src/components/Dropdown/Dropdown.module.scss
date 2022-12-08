@@ -1,0 +1,56 @@
+.list {
+   position: absolute;
+   z-index: 10;
+   transition: all 0.5s ease;
+   top: 90%;
+   opacity: 1;
+}
+
+.hidden {
+   position: absolute;
+   z-index: -1;
+   transition: all 0.5s ease;
+   opacity: 0;
+   top: 0%;
+}
+
+.wrapper {
+   position: relative;
+   button {
+      font-family: 'Nerko One', cursive;
+      position: relative;
+      z-index: 11;
+      border: 1px solid #000;
+      background-color: rgb(153 251 12 );
+      padding: 5px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 150px;
+   }
+
+}
+.item{
+   font-family: 'Nerko One', cursive;
+   border: 1px solid #000;
+      background-color: rgb(153 251 12 );
+      padding: 5px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      width: 150px;
+}
+
+.button {
+   border: 1px solid #000;
+   background-color: rgb(241, 241, 18);
+   padding: 5px;
+   margin: 5px;
+   border-radius: 5px;
+
+   &:hover {
+      color: rgb(241, 241, 18);
+      background-color: #000;
+   }
+}

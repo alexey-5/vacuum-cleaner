@@ -32,7 +32,7 @@ function Header() {
             ></img>
             <div className={styles.title}>
               <h1>Пылесосы</h1>
-              Самые лучшие
+              <h3>Самые лучшие</h3>
             </div>
           </div>
         </Link>

@@ -25,3 +25,10 @@
     left: 3px;
    }
  }
+ .dropdown{
+   display: flex;
+   justify-content: space-between;
+   @media (max-width:760px){
+    display: block ;
+   }
+ }
