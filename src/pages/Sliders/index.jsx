@@ -43,13 +43,16 @@ const Sliders = () => {
    const base = useSelector((state) => state.base.items)
    return (
       <>
-         <div className={styles.wraper}>
+         <div className={styles.wrapper}>
+
             <Slider {...settings}>
                {base.map((el) =>
                   <div className={styles.card} key={el.idImg} >
                      <img /* width="400"  height="400" */ src={require(`../../img/${el.idImg}.jpg`)} />
+                     <h5>{el.name}</h5>
                   </div>)}
             </Slider>
+             
          </div>
          <Back />
       </>

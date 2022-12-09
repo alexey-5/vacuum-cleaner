@@ -10,6 +10,8 @@ function Header() {
   const [countTotal, setCountTotal] = useState(0);
   const dispatch = useDispatch();
 
+  const [info, setInfo] = useState(false);
+
   useEffect(() => {
     if (render1.current) {
       const json = JSON.stringify(arrCart);
@@ -36,6 +38,13 @@ function Header() {
             </div>
           </div>
         </Link>
+        <img className={styles.info}
+          onClick={() => setInfo(!info)}
+          width="50"
+          height="50"
+          src={require("../../img/info.svg").default}
+          alt="like"
+        />
         <Link to="/like">
           <div className={styles.button}>
             <img
@@ -53,6 +62,30 @@ function Header() {
             {sum} ₽ | {countTotal} шт.
           </div>
         </Link>
+      </div>
+      <div className={info ? styles.info_text : styles.info_none}>
+        <ul>
+          <li>
+            Проект разработан на библиотеке <b>react</b>.
+          </li>
+          <li>
+            Используется стейт менеджер <b>redux/toolkit</b>.
+          </li>
+          <li>
+            Применяется <b>react-router v6</b>.
+          </li>
+          <li>
+            Это учебный проект от alexey-5  <b>alexey-dynai48@yandex.ru</b>.
+          </li>
+        </ul>
+        <img
+            className={styles.del}
+            width={30}
+            height={30}
+            src={require(`../../img/del.svg`).default}
+            alt="delete"
+            onClick={() => setInfo(false)}
+          />
       </div>
     </header>
   );

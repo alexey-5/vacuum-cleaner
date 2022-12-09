@@ -16,6 +16,7 @@ body {
    min-height: 85vh;
    @media (max-width: 480px) {
     width: calc(100vw - 14px);
+   
  }
 }
  .futer{
@@ -35,6 +36,23 @@ body {
      }
    } */
  }
- 
+ .slick-slide > div {
+  margin: 0 10px;
+ }
+ .slick-prev:before, .slick-next:before{
+  font-size: 30px;
+  color: #872e2e;
+ }
+ .slick-next {
+  right: -3px;
+}
+.slick-prev {
+  left: 3px;
+  z-index: 20;
+}
+.slick-dots {
+  bottom: -40px;
+}
+
 
 

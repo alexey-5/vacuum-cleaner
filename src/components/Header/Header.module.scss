@@ -32,6 +32,61 @@ align-items: center;
 .title{
   color: #000;
 }
+.info{
+  padding: 5px;
+  cursor: pointer;
+}
+.info_text{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 110px;
+  max-width: 400px;
+  height:400px;
+  z-index: 22;
+  background-color: rgb(230, 236, 230, 90%);
+  border: 2px solid #7b6e6eab;
+  border-radius: 10px;
+  padding: 30px;
+  transition: all 0.5s ease;
+  visibility: visible;
+    animation: port 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.58, 0.59, 0.2, 0.54);
+  
+}
+@keyframes port {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 80px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+.info_none{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 200px;
+  max-width: 400px;
+  height:400px;
+  z-index: 22;
+  background-color: rgb(230, 236, 230, 0%);
+  border: 2px solid #f0e8e8ab;
+  border-radius: 10px;
+  padding: 30px;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  color: rgb(230, 236, 230, 0%);
+}
+.del{
+  display: block;
+ margin: 30px;
+ cursor: pointer;
+}
 
 @media (max-width: 370px) {
   .title h1{

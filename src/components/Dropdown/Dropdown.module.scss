@@ -5,6 +5,7 @@
    top: 90%;
    opacity: 1;
 }
+
 .hidden {
    position: absolute;
    z-index: -1;
@@ -12,14 +13,21 @@
    opacity: 0;
    top: 0%;
 }
+
 .wrapper {
+   ul {
+      list-style: none;
+   }
+   font-size: 17px;
    position: relative;
+
    button {
+      font-size: 17px;
       font-family: 'Nerko One', cursive;
       position: relative;
       z-index: 11;
       border: 1px solid #000;
-      background-color: rgb(153 251 12 );
+      background-color: rgb(153 251 12);
       padding: 5px;
       margin: 5px;
       border-radius: 5px;
@@ -27,14 +35,15 @@
       width: 150px;
    }
 }
-.item{
+
+.item {
    font-family: 'Nerko One', cursive;
    border: 1px solid #000;
-      background-color: rgb(153 251 12 );
-      padding: 5px;
-      margin: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      width: 150px;
+   background-color: rgb(153 251 12);
+   padding: 5px;
+   margin: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+   width: 150px;
 }
