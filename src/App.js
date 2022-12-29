@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import CardLike2 from "./pages/CardLike2";
@@ -8,10 +9,11 @@ import Slider from "./pages/Sliders";
 import "./scss/app.scss";
 
 function App() {
-
+   const bg = useSelector((state)=>state.base.background);
   return (
     <>
-    <div className="wrapper">
+    <div className="wrapper" style={{backgroundImage:`url(/img/bg/${bg}.jpg)`}}>
+      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,7 +22,7 @@ function App() {
         <Route path="/like" element={<CardLike2 />} />
         <Route path="/product/:imageUrl" element={<One />} />
       </Routes>
-      
+     
     </div>
     <p className="futer">Это учебный проект. Вся информация на сайте условная</p> 
     </>

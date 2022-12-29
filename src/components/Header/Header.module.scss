@@ -5,16 +5,23 @@
      align-items: center;
      justify-content: space-between;
      flex-wrap: wrap;
+     
    }
+   position: sticky;
+     top: 0;
+     z-index: 30;
+     background-color: aquamarine;
+     border-radius: 10px;
 }
 .container {
   width: 90%;
   margin: 0 auto;
+  
 }
 .header_logo {
   display: flex;
 align-items: center;
-
+ 
 }
 .button{
   font-family: 'Nerko One', cursive;

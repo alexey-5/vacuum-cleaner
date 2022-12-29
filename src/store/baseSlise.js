@@ -17,11 +17,17 @@ const baseSlise = createSlice({
     items: [],  // весь массив товаров
     loading: 'pending',//'idle' | 'pending' | 'succeeded' | 'failed' // idle -пустой
     categories: 0, // выбор категории
-    //pizzaMore:{}
+    background: 0,
   },
   reducers: { 
     setCategory(state, action){ // установка категории
       state.categories = action.payload
+     },
+
+    setBackground(state){ // установка фона
+      if(state.background<7)
+      state.background = state.background + 1;
+      else(state.background = 0)
      },
    },
   extraReducers:{
@@ -40,5 +46,5 @@ const baseSlise = createSlice({
     },
   },
 });
-export const { setCategory } = baseSlise.actions;
+export const { setCategory, setBackground } = baseSlise.actions;
 export default baseSlise.reducer;

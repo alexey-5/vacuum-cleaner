@@ -52,7 +52,6 @@ const Sliders = () => {
                      <h5>{el.name}</h5>
                   </div>)}
             </Slider>
-             
          </div>
          <Back />
       </>

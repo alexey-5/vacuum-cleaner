@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { setBackground } from "../../store/baseSlise";
 import styles from "./Dropdown.module.scss";
 
 const Dropdown = () => {
-   const [list, setList] = useState(false)
+   const [list, setList] = useState(false);
+    const dispatch = useDispatch();
    return (
       <div className={styles.wrapper}>
 
@@ -13,6 +16,7 @@ const Dropdown = () => {
             <Link to="/slider">
                <li className={styles.item}>Слайдер</li>
             </Link>
+            <li onClick={()=>dispatch(setBackground())} className={styles.item}>Сменить фон</li>
             {/* <li className={styles.item}>Второй</li>
             <li className={styles.item}>Третий</li> */}
          </ul>

@@ -10,19 +10,26 @@ body {
    width: calc(100vw - 60px);
    height: 100%;
    background-color: #ffffffab;
+   //background-image:'url(../src/img/beack/1.jpg)' ;
    margin: 30px auto;
    border-radius: 10px;
    max-width: 1420px;
    min-height: 85vh;
    @media (max-width: 480px) {
     width: calc(100vw - 14px);
-   
  }
+}
+.wrapper_img{
+ background-image:'./src/img/beack/1.jpg' ;
 }
  .futer{
   padding: 5px 15px;
   color: #8a826a;
   bottom: 10px;
+  position: sticky;
+  bottom: 0;
+  background-color: #d8d0bc;
+  text-align: center;
   
  }
  .container {

@@ -87,6 +87,7 @@ function Header() {
             onClick={() => setInfo(false)}
           />
       </div>
+      
     </header>
   );
 }

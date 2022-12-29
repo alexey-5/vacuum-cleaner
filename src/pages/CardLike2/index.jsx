@@ -17,6 +17,7 @@ function CardLike2() {
 
   return (
     <section className="container">
+      <h3 className={styles.like}>Избранное</h3>
     <div className={styles.like_wrapper}>
       {arrLike.map((el) => (
         <div key={el.idImg} className={styles.card}>
