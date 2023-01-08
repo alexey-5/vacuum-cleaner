@@ -16,7 +16,7 @@ function App() {
       
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/slider" element={<Slider />} />
         <Route path="/like" element={<CardLike2 />} />
