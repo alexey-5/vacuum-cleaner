@@ -27,7 +27,7 @@ const baseSlise = createSlice({
     setBackground(state){ // установка фона
       if(state.background<7)
       state.background = state.background + 1;
-      else(state.background = 0)
+      else(state.background = 0);
      },
    },
   extraReducers:{

@@ -7,12 +7,15 @@ import Home from "./pages/Home";
 import One from "./pages/One";
 import Slider from "./pages/Sliders";
 import "./scss/app.scss";
+//import bg1 from "./img/bg/1.jpg";
 
 function App() {
    const bg = useSelector((state)=>state.base.background);
+   ///console.log('фонApp = ',bg)
+   const bg2 = require(`./img/bg/${bg}.jpg`)
   return (
     <>
-    <div className="wrapper" style={{backgroundImage:`url(/img/bg/${bg}.jpg)`}}>
+    <div className="wrapper" style={{backgroundImage:`url(${bg2})`}}>
       
       <Header />
       <Routes>

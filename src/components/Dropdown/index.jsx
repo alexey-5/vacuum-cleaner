@@ -17,8 +17,7 @@ const Dropdown = () => {
                <li className={styles.item}>Слайдер</li>
             </Link>
             <li onClick={()=>dispatch(setBackground())} className={styles.item}>Сменить фон</li>
-            {/* <li className={styles.item}>Второй</li>
-            <li className={styles.item}>Третий</li> */}
+            
          </ul>
       </div>
    )
