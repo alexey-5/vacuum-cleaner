@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/vacuum-cleaner/static/css/main.46092290.css",
+    "main.js": "/vacuum-cleaner/static/js/main.3e9d32f7.js",
+    "static/media/4.jpg": "/vacuum-cleaner/static/media/4.111eaffe2898dbec3a59.jpg",
+    "static/media/9.jpg": "/vacuum-cleaner/static/media/9.db8b749a8a8699d614da.jpg",
+    "static/media/cartEmpty.jpg": "/vacuum-cleaner/static/media/cartEmpty.0e0e61e48976a081d7b8.jpg",
+    "static/media/12.jpg": "/vacuum-cleaner/static/media/12.a74ec4532eb9e2cbc4a7.jpg",
+    "static/media/8.jpg": "/vacuum-cleaner/static/media/8.6e64788492457f045f18.jpg",
+    "static/media/10.jpg": "/vacuum-cleaner/static/media/10.19593ecbdf33b22e8540.jpg",
+    "static/media/7.jpg": "/vacuum-cleaner/static/media/7.a9cd305f3c916d3ab72b.jpg",
+    "static/media/logo2.png": "/vacuum-cleaner/static/media/logo2.7038c77bdb9ae7af0e4f.png",
+    "static/media/6.jpg": "/vacuum-cleaner/static/media/6.a7f8c135bbd5dd222ce0.jpg",
+    "static/media/14.jpg": "/vacuum-cleaner/static/media/14.6bae14b7957b6b22ff1c.jpg",
+    "static/media/13.jpg": "/vacuum-cleaner/static/media/13.8c48cd8bd23d339e1e80.jpg",
+    "static/media/15.jpg": "/vacuum-cleaner/static/media/15.c169de8f423f71154be9.jpg",
+    "static/media/slick.svg": "/vacuum-cleaner/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/vacuum-cleaner/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/vacuum-cleaner/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/info.svg": "/vacuum-cleaner/static/media/info.082d761469384ba79134bb6a8b3b7162.svg",
+    "static/media/slick.woff": "/vacuum-cleaner/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/search.svg": "/vacuum-cleaner/static/media/search.7675b52f325d2dd13bcad0c1bad2fb6f.svg",
+    "static/media/plus.svg": "/vacuum-cleaner/static/media/plus.b5e401496c260f5d471c1ee6ab0ae5bc.svg",
+    "static/media/plus_cart.svg": "/vacuum-cleaner/static/media/plus_cart.044adeeeb963d3df12b51329b4f15e67.svg",
+    "index.html": "/vacuum-cleaner/index.html",
+    "static/media/minus_off.svg": "/vacuum-cleaner/static/media/minus_off.33f8ce995d744da76cbdf2ba035338a7.svg",
+    "static/media/minus_cart.svg": "/vacuum-cleaner/static/media/minus_cart.d86fe032a9f34f57de0c3e4aed63d46f.svg",
+    "static/media/like.svg": "/vacuum-cleaner/static/media/like.367455ec33f15cff9186e2bb1a41a31b.svg",
+    "static/media/like-add.svg": "/vacuum-cleaner/static/media/like-add.8aca09d78426cd50e3c1f7ae30fca1c1.svg",
+    "static/media/del.svg": "/vacuum-cleaner/static/media/del.aa3140002f909ac1f9a714cd1b042fa0.svg",
+    "static/media/arr-bottom.svg": "/vacuum-cleaner/static/media/arr-bottom.c1de567923c3405afa7e038e8ea0a323.svg",
+    "static/media/check.svg": "/vacuum-cleaner/static/media/check.2c5b5a595b53b905418332a9bfd2f966.svg",
+    "static/media/arr-top.svg": "/vacuum-cleaner/static/media/arr-top.36e8a0f6b2f441dc31a06f5c423b35dc.svg",
+    "main.46092290.css.map": "/vacuum-cleaner/static/css/main.46092290.css.map",
+    "main.3e9d32f7.js.map": "/vacuum-cleaner/static/js/main.3e9d32f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46092290.css",
+    "static/js/main.3e9d32f7.js"
+  ]
+}
