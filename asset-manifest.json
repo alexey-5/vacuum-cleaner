@@ -1,16 +1,21 @@
 {
   "files": {
     "main.css": "/vacuum-cleaner/static/css/main.46092290.css",
-    "main.js": "/vacuum-cleaner/static/js/main.3e9d32f7.js",
-    "static/media/4.jpg": "/vacuum-cleaner/static/media/4.111eaffe2898dbec3a59.jpg",
+    "main.js": "/vacuum-cleaner/static/js/main.152a8393.js",
+    "static/media/4.jpg": "/vacuum-cleaner/static/media/4.4e60d44dd8e99f15a800.jpg",
     "static/media/9.jpg": "/vacuum-cleaner/static/media/9.db8b749a8a8699d614da.jpg",
     "static/media/cartEmpty.jpg": "/vacuum-cleaner/static/media/cartEmpty.0e0e61e48976a081d7b8.jpg",
     "static/media/12.jpg": "/vacuum-cleaner/static/media/12.a74ec4532eb9e2cbc4a7.jpg",
-    "static/media/8.jpg": "/vacuum-cleaner/static/media/8.6e64788492457f045f18.jpg",
-    "static/media/10.jpg": "/vacuum-cleaner/static/media/10.19593ecbdf33b22e8540.jpg",
     "static/media/7.jpg": "/vacuum-cleaner/static/media/7.a9cd305f3c916d3ab72b.jpg",
-    "static/media/logo2.png": "/vacuum-cleaner/static/media/logo2.7038c77bdb9ae7af0e4f.png",
+    "static/media/0.jpg": "/vacuum-cleaner/static/media/0.ededc70a0ed059b312de.jpg",
+    "static/media/3.jpg": "/vacuum-cleaner/static/media/3.ededc70a0ed059b312de.jpg",
     "static/media/6.jpg": "/vacuum-cleaner/static/media/6.a7f8c135bbd5dd222ce0.jpg",
+    "static/media/8.jpg": "/vacuum-cleaner/static/media/8.6e64788492457f045f18.jpg",
+    "static/media/2.jpg": "/vacuum-cleaner/static/media/2.7affd7007f3983aabbc8.jpg",
+    "static/media/1.jpg": "/vacuum-cleaner/static/media/1.80fb5357c658c8fd602d.jpg",
+    "static/media/10.jpg": "/vacuum-cleaner/static/media/10.19593ecbdf33b22e8540.jpg",
+    "static/media/logo2.png": "/vacuum-cleaner/static/media/logo2.7038c77bdb9ae7af0e4f.png",
+    "static/media/5.jpg": "/vacuum-cleaner/static/media/5.ec7831637342b20d477f.jpg",
     "static/media/14.jpg": "/vacuum-cleaner/static/media/14.6bae14b7957b6b22ff1c.jpg",
     "static/media/13.jpg": "/vacuum-cleaner/static/media/13.8c48cd8bd23d339e1e80.jpg",
     "static/media/15.jpg": "/vacuum-cleaner/static/media/15.c169de8f423f71154be9.jpg",
@@ -32,10 +37,10 @@
     "static/media/check.svg": "/vacuum-cleaner/static/media/check.2c5b5a595b53b905418332a9bfd2f966.svg",
     "static/media/arr-top.svg": "/vacuum-cleaner/static/media/arr-top.36e8a0f6b2f441dc31a06f5c423b35dc.svg",
     "main.46092290.css.map": "/vacuum-cleaner/static/css/main.46092290.css.map",
-    "main.3e9d32f7.js.map": "/vacuum-cleaner/static/js/main.3e9d32f7.js.map"
+    "main.152a8393.js.map": "/vacuum-cleaner/static/js/main.152a8393.js.map"
   },
   "entrypoints": [
     "static/css/main.46092290.css",
-    "static/js/main.3e9d32f7.js"
+    "static/js/main.152a8393.js"
   ]
 }
